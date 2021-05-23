@@ -10,18 +10,23 @@ const UserSchema = new mongoose.Schema({
     required: true,
   },
   aadhar: {
-    type: String,
+    type: Number,
+    min: 12,
+    max:12,
     required: true,
     unique: true,
   },
   dob: {
-    type: String,
+    type: Date,
     required: true,
+    trim: true,
+},
+age: { 
+   type: Number,
+   min: 18, max: 65, 
+   required: true, 
   },
-  age: {
-    type: String,
-    required: true,
-  },
+
   state: {
     type: String,
     required: true,
@@ -39,7 +44,9 @@ const UserSchema = new mongoose.Schema({
     required: true,
   },
   pin_code: {
-    type: String,
+    type: Number,
+    min:6,
+    max:6,
     required: true,
   },
   email: {
@@ -48,11 +55,15 @@ const UserSchema = new mongoose.Schema({
     unique: true,
   },
   phone: {
-    type: String,
+    type: Number,
+    min:0,
+    max:10,
     required: true,
   },
   alternate_phone: {
-    type: String,
+    type: Number,
+    min:0,
+    max:10,
     required: true,
   },
   area: {
@@ -61,6 +72,7 @@ const UserSchema = new mongoose.Schema({
   },
   soil: {
     type: String,
+    enum:["red","black","other"],
     reuired: true,
   },
   crops: {
