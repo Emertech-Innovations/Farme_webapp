@@ -4,6 +4,7 @@ const UserSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
+    default:null
   },
   address: {
     type: String,
@@ -11,20 +12,27 @@ const UserSchema = new mongoose.Schema({
   },
   aadhar: {
     type: Number,
-    min: 12,
-    max:12,
+    minlength: 12,
+    maxlength:12,
     required: true,
     unique: true,
   },
   dob: {
-    type: Date,
-    required: true,
-    trim: true,
+    day: {
+      type: Number
+    },
+    month: {
+      type: Number
+    },
+    year: {
+      type: Number
+    }
 },
 age: { 
    type: Number,
-   min: 18, max: 65, 
+   
    required: true, 
+   
   },
 
   state: {
@@ -45,26 +53,30 @@ age: {
   },
   pin_code: {
     type: Number,
-    min:6,
-    max:6,
+    
+    minlength:6,
+    maxlength:6,
     required: true,
+   
   },
   email: {
     type: String,
-    required: true,
-    unique: true,
+    lowercase: true,
+    trim: true,
+    required: true
   },
   phone: {
     type: Number,
-    min:0,
-    max:10,
+    minlength:0,
+    maxlength:13,
     required: true,
   },
   alternate_phone: {
     type: Number,
-    min:0,
-    max:10,
+    minlength:0,
+    maxlength:13,
     required: true,
+    
   },
   area: {
     type: String,

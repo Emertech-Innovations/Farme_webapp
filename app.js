@@ -9,6 +9,8 @@ require("dotenv").config();
 // app.use(cors(corsOptions));
 app.use(express.json({ extended: false }));
 
+
+
 connectDB();
 
 var ur = require("./routes/user");
