@@ -4,7 +4,7 @@ const UserSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    default:null
+    default: null,
   },
   address: {
     type: String,
@@ -13,26 +13,25 @@ const UserSchema = new mongoose.Schema({
   aadhar: {
     type: Number,
     minlength: 12,
-    maxlength:12,
+    maxlength: 12,
     required: true,
     unique: true,
   },
   dob: {
     day: {
-      type: Number
+      type: Number,
     },
     month: {
-      type: Number
+      type: Number,
     },
     year: {
-      type: Number
-    }
-},
-age: { 
-   type: Number,
-   
-   required: true, 
-   
+      type: Number,
+    },
+  },
+  age: {
+    type: Number,
+
+    required: true,
   },
 
   state: {
@@ -53,30 +52,28 @@ age: {
   },
   pin_code: {
     type: Number,
-    
-    minlength:6,
-    maxlength:6,
+
+    minlength: 6,
+    maxlength: 6,
     required: true,
-   
   },
   email: {
     type: String,
     lowercase: true,
     trim: true,
-    required: true
+    required: true,
   },
   phone: {
     type: Number,
-    minlength:0,
-    maxlength:13,
+    minlength: 0,
+    maxlength: 13,
     required: true,
   },
   alternate_phone: {
     type: Number,
-    minlength:0,
-    maxlength:13,
+    minlength: 0,
+    maxlength: 13,
     required: true,
-    
   },
   area: {
     type: String,
@@ -84,7 +81,7 @@ age: {
   },
   soil: {
     type: String,
-    enum:["red","black","other"],
+    enum: ["red", "black", "other"],
     reuired: true,
   },
   crops: {
