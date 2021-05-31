@@ -4,6 +4,7 @@ exports.register = async function (req, res) {
   try {
     const {
       name,
+      gender,
       address,
       aadhar,
       dob,
@@ -22,6 +23,7 @@ exports.register = async function (req, res) {
     } = req.body;
     const newUser = new User({
       name,
+      gender,
       address,
       aadhar,
       dob,

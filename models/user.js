@@ -6,6 +6,11 @@ const UserSchema = new mongoose.Schema({
     required: true,
     default: null,
   },
+  gender: {
+    type: String,
+    required: true,
+    default: null,
+  },
   address: {
     type: String,
     required: true,
@@ -18,19 +23,11 @@ const UserSchema = new mongoose.Schema({
     unique: true,
   },
   dob: {
-    day: {
-      type: Number,
-    },
-    month: {
-      type: Number,
-    },
-    year: {
-      type: Number,
-    },
+    type: String,
+    required: true,
   },
   age: {
     type: Number,
-
     required: true,
   },
 
