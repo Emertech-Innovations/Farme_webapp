@@ -5,7 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 var corsOptions = {
   origin: [
-    "https://goofy-hawking-cd4051.netlify.app/",
+    "https://goofy-hawking-cd4051.netlify.app",
     "http://localhost:3000",
   ],
 };
