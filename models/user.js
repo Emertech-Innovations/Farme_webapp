@@ -78,11 +78,11 @@ const UserSchema = new mongoose.Schema({
   },
   soil: {
     type: String,
-    enum: ["red", "black", "other"],
     reuired: true,
   },
   crops: {
-    type: String,
+    type: Array,
+    default: [],
     required: true,
   },
   date: {
