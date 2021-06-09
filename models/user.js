@@ -70,7 +70,6 @@ const UserSchema = new mongoose.Schema({
     type: Number,
     minlength: 0,
     maxlength: 13,
-    required: true,
   },
   area: {
     type: String,
