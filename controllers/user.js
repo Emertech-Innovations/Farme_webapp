@@ -46,6 +46,9 @@ exports.register = async function (req, res) {
     });
   } catch (err) {
     console.log(err);
+    return res.status(403).send({
+      msg: "error",
+    });
   }
 };
 
