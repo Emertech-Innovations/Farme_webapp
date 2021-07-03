@@ -4,41 +4,16 @@ exports.register = async function (req, res) {
   try {
     const {
       name,
-      gender,
-      address,
-      aadhar,
-      dob,
-      age,
-      state,
-      district,
-      tahshil,
-      village,
-      pin_code,
       email,
       phone,
-      alternate_phone,
-      area,
-      soil,
-      crops,
+     message,
+      
     } = req.body;
     const newUser = new User({
       name,
-      gender,
-      address,
-      aadhar,
-      dob,
-      age,
-      state,
-      district,
-      tahshil,
-      village,
-      pin_code,
       email,
       phone,
-      alternate_phone,
-      area,
-      soil,
-      crops,
+      message,
     });
     await newUser.save();
     return res.send({

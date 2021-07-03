@@ -5,8 +5,8 @@ const cors = require("cors");
 require("dotenv").config();
 var corsOptions = {
   origin: [
-    "https://goofy-hawking-cd4051.netlify.app",
-    "http://localhost:3000",
+    
+    "http://localhost:5000",
   ],
 };
 app.use(cors(corsOptions));

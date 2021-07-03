@@ -6,54 +6,6 @@ const UserSchema = new mongoose.Schema({
     required: true,
     default: null,
   },
-  gender: {
-    type: String,
-    required: true,
-    default: null,
-  },
-  address: {
-    type: String,
-    required: true,
-  },
-  aadhar: {
-    type: Number,
-    minlength: 12,
-    maxlength: 12,
-    required: true,
-    unique: true,
-  },
-  dob: {
-    type: String,
-    required: true,
-  },
-  age: {
-    type: Number,
-    required: true,
-  },
-
-  state: {
-    type: String,
-    required: true,
-  },
-  district: {
-    type: String,
-    required: true,
-  },
-  tahshil: {
-    type: String,
-    required: true,
-  },
-  village: {
-    type: String,
-    required: true,
-  },
-  pin_code: {
-    type: Number,
-
-    minlength: 6,
-    maxlength: 6,
-    required: true,
-  },
   email: {
     type: String,
     lowercase: true,
@@ -66,28 +18,11 @@ const UserSchema = new mongoose.Schema({
     maxlength: 13,
     required: true,
   },
-  alternate_phone: {
-    type: Number,
-    minlength: 0,
-    maxlength: 13,
-  },
-  area: {
+  message: {
     type: String,
     required: true,
-  },
-  soil: {
-    type: String,
-    reuired: true,
-  },
-  crops: {
-    type: Array,
-    default: [],
-    required: true,
-  },
-  date: {
-    type: Date,
-    default: Date.now,
-  },
+    default: null,
+  }
 });
 
 module.exports = User = mongoose.model("user", UserSchema);

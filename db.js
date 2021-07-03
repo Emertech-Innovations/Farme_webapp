@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
 const db =
-  "mongodb+srv://farmer:farmer@cluster0.rwpdb.mongodb.net/farmerdb?retryWrites=true&w=majority";
+  
+  "mongodb+srv://Neha:1999@cluster0.cfofw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 const connectDB = async () => {
   try {
