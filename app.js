@@ -8,6 +8,7 @@ var corsOptions = {
     "https://goofy-hawking-cd4051.netlify.app",
     "https://fervent-agnesi-05be8e.netlify.app",
     "http://localhost:3000",
+    "https://ajinkyagore.in/",
   ],
 };
 app.use(cors(corsOptions));
